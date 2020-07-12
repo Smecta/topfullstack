@@ -1,0 +1,44 @@
+<template>
+  <div class="pa-3">
+    <h3>课程列表</h3>
+    <v-row>
+      <v-col v-for="item in courses" :key="item._id" md="3">
+        <v-card :to="`/courses/${item._id}`" class="mx-auto" max-width="344">
+          <v-img :src="item.cover"></v-img>
+
+          <v-card-title>
+            {{ item.name }}
+          </v-card-title>
+
+          <v-card-subtitle>
+            {{ item.createdAt }}
+          </v-card-subtitle>
+
+          <v-card-actions>
+            <v-btn text>分享</v-btn>
+
+            <v-btn color="purple" text>
+              导出
+            </v-btn>
+
+            <v-spacer></v-spacer>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+  </div>
+</template>
+
+<script>
+export default {
+  async asyncData({ $axios }) {
+    const data = await $axios.$get('courses')
+
+    return {
+      courses: data.data
+    }
+  }
+}
+</script>
+
+<style></style>
