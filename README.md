@@ -1,11 +1,11 @@
 # topfullstack
 NodeJs+VueJs全栈开发视频源码
 
-web端 vue+bootstrap-vue+SSR
-管理端 vue+element ui
-app+小程序端 vue+uni-app
-服务端(管理端) nest.js+mongoDB
-服务端(客户端) nest.js+mongoDB
+* web端 vue+bootstrap-vue+SSR
+* 管理端 vue+element ui
+* app+小程序端 vue+uni-app
+* 服务端(管理端) nest.js+mongoDB
+* 服务端(客户端) nest.js+mongoDB
 
 
 启动命令：`nest start -w admin`
@@ -17,6 +17,11 @@ app+小程序端 vue+uni-app
 * 新建仓库
 1. 勾选开源协议 MIT (比较宽松的)
 2. .gitgnore 忽略的文件 选择 node
+
+* 推送仓库
+1. git add . 
+2. git commit -am "更新内容"
+3. git push -u topfullstack master
 
 * 本地环境
 1. 建立本地根目录
